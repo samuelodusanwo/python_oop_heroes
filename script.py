@@ -46,3 +46,19 @@ print(ironman.get_identity())
 
 falcon.use_power()
 flash.use_power()
+
+
+class Car:
+    def __init__(self, model):
+        self.model = model
+        
+    def move(self):
+        print(f"{self.model} is moving")
+        
+class Plane(Car):
+    def move(self):
+        print(f"{self.model} plane moves so fast before taking off")
+        
+
+for tec in [Car("Toyota"), Plane("BMW")]:
+    tec.move()
